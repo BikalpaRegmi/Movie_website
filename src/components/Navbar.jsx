@@ -17,7 +17,20 @@ const Navbar = ({onSearch}) => {
       }
     }
   }
- 
+  useEffect(() => {
+    const handleKeyUp = (event) => {
+      if (event.code === 'Enter') {
+        event.preventDefault();
+        toggleSearch();
+      } 
+    };
+  
+    document.addEventListener('keydown', handleKeyUp);
+    return () => {
+      document.removeEventListener('keydown', handleKeyUp);
+    };
+  }, [toggleSearch]);
+
 const toggleHamburger = ()=>{
   setHamburger(false);
 }
