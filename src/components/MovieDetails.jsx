@@ -24,12 +24,12 @@ const MovieDetails = () => {
     <div>
     <div className="wrapper">
       <div className="image-poster md:px-9">
-      <img src={`https://image.tmdb.org/t/p/original/${movie.backdrop_path}`} alt=" the image is not supported" className='rounded-xl w-full md:h-[449px] h-64 p-3 opacity-70'/>
+      <img src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`} alt=" the image is not supported" className='rounded-xl w-full md:h-[449px] h-64 p-3 opacity-70'/>
       </div>
 
       <div className="images&details md:flex justify-around">
       <div className="img">
-      <img src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`} alt=" the image is not supported" className='rounded-[90px] w-4/5 md:w-72  h-64 p-3 ml-9 opacity-70'/>
+      <img src={`https://image.tmdb.org/t/p/original/${movie.backdrop_path}`} alt=" the image is not supported" className='rounded-[90px] w-4/5 md:w-72  h-64 p-3 ml-9 opacity-70'/>
       </div>
       <div className="right mt-1">
         <p className='text-3xl text-center pb-5'>{movie.original_title}</p>
